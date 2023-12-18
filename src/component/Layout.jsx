@@ -11,8 +11,8 @@ function Layout() {
             <div className='logo'>
             <h1><a href=''>logo</a></h1>
             </div>
-            <ul className='left'>
-              <NavLink to='/home'>home</NavLink>
+            <ul>
+              <NavLink to='/'>home</NavLink>
               <NavLink to='/shop'>shop</NavLink>
             </ul>
             <ol>
