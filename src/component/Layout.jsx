@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 import '../css/Layout.css';
 
@@ -12,13 +12,12 @@ function Layout() {
             <h1><a href=''>logo</a></h1>
             </div>
             <ul className='left'>
-            <li><a href='#'>home</a></li>
-            <li><a href='#'>shop</a></li>
-            <li><a href='#'>about</a></li>
+              <NavLink to='/home'>home</NavLink>
+              <NavLink to='/shop'>shop</NavLink>
             </ul>
             <ol>
-            <li><a href='#'>&#128682; login</a></li>
-            <li><a href='#'>about</a></li>
+              <NavLink to='/login'>&#128682;login</NavLink>
+              <NavLink to='/about'>about</NavLink>
             </ol>
         </header>
         <Outlet />

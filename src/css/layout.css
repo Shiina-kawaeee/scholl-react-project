@@ -22,13 +22,11 @@
     /* border: 1px solid red; */
     list-style: none;
   }
-  ul li{
-    margin-right: 2rem; 
-  }
   
-  ul li a {
+  ul a {
     color: #ffffff;
     text-decoration: none;
+    margin-right: 2rem; 
   }
   
   ol{
@@ -40,13 +38,10 @@
     list-style: none;
   }
   
-  ol li{
-    margin-right: 2rem; 
-  }
-  
-  ol li a {
+  ol a {
     color: #ffffff;
     text-decoration: none;
+    margin-right: 2rem; 
   }
   h1 a{
     text-decoration: none;
