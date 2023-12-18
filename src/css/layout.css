@@ -5,13 +5,17 @@
     color: white;
   }
   
-  .logo{
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #logo_container{
+    width: 70px;
+    height: 55px;
     cursor:pointer;
-    /* border: 1px solid red; */
+  }
+
+  #logo_container #logo{
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
   }
   
    ul{
