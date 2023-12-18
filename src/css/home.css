@@ -8,7 +8,7 @@
   }  
   .text{
     /* border: 1px solid rgb(0, 217, 255); */
-    width: 30rem;
+    width: 30rem;; 
     
   }
   
@@ -30,7 +30,7 @@
   
   .space{
     /* border:1px solid red; */
-    height: 5rem ;
+    height: 2rem ;
   } 
   .space2{
     /* border:1px solid red; */
@@ -39,8 +39,8 @@
   
                      /*buttons */
   .btn{
-    border-radius:10cm;
-    padding: 5%;  
+    border-radius:1em;
+    padding: 5% 10% ;  
     cursor: pointer;
     font-size: 50px; 
     background-color: rgb(0, 0, 0); 
