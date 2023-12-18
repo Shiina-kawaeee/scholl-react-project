@@ -19,8 +19,9 @@
     display: flex;
     justify-content:left;
     align-items: center;
-    /* border: 1px solid red; */
     list-style: none;
+
+    padding-left: 0;
   }
   
   ul a {
