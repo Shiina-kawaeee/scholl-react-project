@@ -6,14 +6,14 @@
   }
   
   #logo_container{
-    width: 70px;
-    height: 55px;
+    width: 80px;
+    height: 90px;
     cursor:pointer;
   }
 
   #logo_container #logo{
-    width: 55px;
-    height: 55px;
+    width: 110px;
+    height: 100px;
 
     object-fit: contain;
   }
@@ -25,13 +25,14 @@
     align-items: center;
     list-style: none;
 
-    padding-left: 0;
+    padding-left: 1;
   }
   
   ul a {
     color: #ffffff;
     text-decoration: none;
     margin-right: 2rem; 
+    font-size: 18px;
   }
   
   ol{
@@ -47,6 +48,7 @@
     color: #ffffff;
     text-decoration: none;
     margin-right: 2rem; 
+    font-size: 18px;
   }
   h1 a{
     text-decoration: none;
