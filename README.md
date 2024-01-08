@@ -1,4 +1,4 @@
 This code used for scholl webpage project (subject Computer in taweethapisek scholl)  
-author:
-  1.Kitiphon sraubon
-  2.Monai Ngoenfarang
+<space><space>author:
+<space><space><space>1.Kitiphon sraubon
+<space><space><space>2.Monai Ngoenfarang
