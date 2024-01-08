@@ -5,11 +5,11 @@ import axios from 'axios';
 function Shop() {
 
   useEffect(() => {
-    const url = 'http://localhost/backEnd/getData.php';
+    const url = 'http://localhost/phpApi/getData.php';
 
     axios.post(url, {collectionName : "nompang_products"})
     .then((result) => {
-      console.log(result);
+      console.log(result.data);
     }).catch((error) => {
       console.log('An Error is occupied: ', error);
     })
