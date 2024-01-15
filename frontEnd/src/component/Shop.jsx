@@ -5,6 +5,7 @@ import axios from 'axios';
 function Shop() {
 
   useEffect(() => {
+    
     const url = 'http://localhost/phpApi/getData.php';
 
     axios.post(url, {collectionName : "nompang_products"})
