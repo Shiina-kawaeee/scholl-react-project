@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../css/shop.css';
 import axios from 'axios';
 
 function Shop() {
+  const [dbInfo, setDbInfo] = useState(null);
 
   useEffect(() => {
 
@@ -14,7 +15,9 @@ function Shop() {
       'Content-Type': 'application/json; charset=UTF-8'
     }})
     .then((result) => {
-      console.log(result.data.data.result[0]);
+      console.log(result.data.data.result);
+
+      setDbInfo(result.data.data.result);
     }).catch((error) => {
       console.log('An Error is occupied: ', error);
     })
@@ -24,6 +27,7 @@ function Shop() {
   return (
     <div className='grid-contrainer'>
       <div className='grid-item'>
+          <p>{dbInfo ? dbInfo[0].Pro_name : "Waiting for data"}</p>
           <img src="" alt="" />
       </div>
       <div className='grid-item'>
