@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, memo} from 'react';
 import '../css/shop.css';
 import axios from 'axios';
 
 function Shop() {
   const [dbInfo, setDbInfo] = useState(null);
+  const ImgfetchServer = 'http://localhost/nompang/assets';
 
   useEffect(() => {
 
-    const url = 'http://localhost/phpApi/getData.php';
+    const url = 'http://localhost/nompang/phpApi/getData.php';
 
     axios.post(url, {collectionName : "nompang_products" } ,
     {
@@ -26,22 +27,19 @@ function Shop() {
 
   return (
     <div className='grid-contrainer'>
-      <div className='grid-item'>
-          <p>{dbInfo ? dbInfo[0].Pro_name : "Waiting for data"}</p>
-          <img src="" alt="" />
-      </div>
-      <div className='grid-item'>
-        <img src="" alt="" />
-      </div>
-      <div className='grid-item'>
-        <img src="" alt="" />
-      </div>
-      <div className='grid-item'>
-        <img src="" alt="" />
-      </div>
-      
+      {dbInfo ? dbInfo.map((value) => {
+
+        return (     
+          <div className='grid-item'
+            key={value.Pro_name}>
+            <p>{value.Pro_name}</p>
+            <img src={`${ImgfetchServer}/shop/${value.Pro_src}`} alt={value.Pro_name} />
+          </div>
+        )
+
+      }) : "Waiting for data"}
     </div>
   )
 }
 
-export default Shop
+export default memo(Shop)
