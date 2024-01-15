@@ -25,18 +25,13 @@
         $sql = "SELECT * FROM $collectionName";
 
         try{
-            $result = $conn->query($sql);
-
-            if($result){
-                $row = $result->fetchAll(PDO::FETCH_ASSOC);
-
-                $response['status'] = array('queryStatus' => 'resultValid');
-                $response['data'] = array('result' => $row);
-                echo json_encode($response);
-            } else {
-                $response['data'] = array('queryStatus' => 'resultInvalid');
-                echo json_encode($response);
-            }
+            $result = $conn->prepare($sql);
+            $result->execute();
+            $row = $result->fetchAll(PDO::FETCH_ASSOC);
+            
+            $response['status'] = array('queryStatus' => 'resultValid');
+            $response['data'] = array('result' => $row);
+            echo json_encode($response);
         }catch(PDOException $e) {
                 header("HTTP/1.1 500 Internal Server Error");
 
