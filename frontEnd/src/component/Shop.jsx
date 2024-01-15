@@ -18,21 +18,21 @@ function Shop() {
   }, []);
 
   return (
-    <div className='grid-contrainer'>
-      <div className='grid-item'>
+    <section className='grid-contrainer'>
+      <article className='grid-item'>
           <img src="" alt="" />
-      </div>
-      <div className='grid-item'>
+      </article>
+      <article className='grid-item'>
         <img src="" alt="" />
-      </div>
-      <div className='grid-item'>
+      </article>
+      <article className='grid-item'>
         <img src="" alt="" />
-      </div>
-      <div className='grid-item'>
+      </article>
+      <article className='grid-item'>
         <img src="" alt="" />
-      </div>
+      </article>
       
-    </div>
+    </section>
   )
 }
 

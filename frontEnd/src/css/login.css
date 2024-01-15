@@ -1,0 +1,14 @@
+.grid-container{
+    border: 1px solid red;
+    margin: 10rem auto 0rem auto;
+    width: 20rem; 
+    height: 20vw;
+    justify-content: center;
+    text-align: center;
+    display:block;
+
+}
+
+.grid-box{
+   
+}
