@@ -16,7 +16,7 @@ function Shop() {
       'Content-Type': 'application/json; charset=UTF-8'
     }})
     .then((result) => {
-      console.log(result.data.data.result);
+      // console.log(result.data.data.result);
 
       setDbInfo(result.data.data.result);
     }).catch((error) => {

@@ -1,0 +1,85 @@
+div#edit-header-container{
+    display: grid;
+
+    margin: 5rem auto 0vw auto;
+
+    justify-content: center;
+
+    background-color: rgb(52, 196, 148);
+
+    border-radius: 1rem;
+
+    width: 50vw;
+
+}
+
+h1#edit-header{
+}
+
+div#edit-form-container{
+    display: flex;
+    flex-direction: column;
+
+    width: 50vw;
+
+    justify-content: flex-start;
+
+    margin: 2vw auto 0vw auto;
+}
+
+input{
+    height: 2vw;
+
+    font-size: 16px;
+
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
+
+div#edit-form-button-container{
+    display: flex;
+    flex-direction: row;
+
+    margin: 2vw auto 0vw auto;
+
+    width: 50vw;
+
+    justify-content: flex-start;
+}
+
+#edit-form-button-update{
+    background-color: rgb(35, 158, 46);
+
+    color: white;
+
+    text-decoration: none;
+
+    border: unset;
+    border-radius: 5px;
+
+    padding: 1rem;
+}
+
+#edit-form-button-cancel{
+    background-color: rgb(196, 35, 35);
+
+    text-decoration: none;
+
+    color: white;
+    
+    margin-left: 1vw;
+
+    border: unset;
+    border-radius: 5px;
+
+    padding: 1rem;
+}
+
+#edit-form-button-update:hover{
+    background-color: rgb(9, 99, 16);
+}
+
+#edit-form-button-cancel:hover{
+    background-color: rgb(168, 30, 30);
+}

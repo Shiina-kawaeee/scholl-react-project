@@ -13,12 +13,13 @@ function Layout() {
               <img id="logo" src={logo}></img>
           </div>
           <ul>
-            <NavLink to='/'>home</NavLink>
-            <NavLink to='/shop'>shop</NavLink>
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/shop'>Shop</NavLink>
           </ul>
           <ol>
-            <NavLink to='/login'>&#128682;login</NavLink>
-            <NavLink to='/about'>about</NavLink>
+            <NavLink to='/login'>&#128682;Login</NavLink>
+            <NavLink to='/about'>About</NavLink>
+            <NavLink to='/edit'>Edit</NavLink>
           </ol>
         </header>
         <Outlet />
