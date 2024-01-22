@@ -18,21 +18,44 @@ function Shop() {
   }, []);
 
   return (
-    <section className='grid-contrainer'>
-      <article className='grid-item'>
-          <img src="" alt="" />
-      </article>
-      <article className='grid-item'>
-        <img src="" alt="" />
-      </article>
-      <article className='grid-item'>
-        <img src="" alt="" />
-      </article>
-      <article className='grid-item'>
-        <img src="" alt="" />
-      </article>
+    <>
+      <section >
+          <div className='grid-contrainer'>
+              <article className='grid-item'>
+                  <img src="https://shop.farmhouse.co.th/media/catalog/product/cache/09ad5326b5f9b030d858c3959bbb1f0b/s/l/slicedbread480g480g_2020-no-layer-_-_-10-oct-2020.png"className='img' alt="" />
+                  <div className='btn-area'>
+                    <a href='#' className='btn-shop'>กด</a>
+                  </div>
+              </article>
+              <article className='grid-item'>
+              <img src="https://shop.farmhouse.co.th/media/catalog/product/cache/09ad5326b5f9b030d858c3959bbb1f0b/s/l/slicedbread480g480g_2020-no-layer-_-_-10-oct-2020.png"className='img' alt="" />
+                <div className='btn-area'>
+                  <a href='#' className='btn-shop'>กด</a>
+                  </div>
+              </article>
+              <article className='grid-item'>
+              <img src="https://shop.farmhouse.co.th/media/catalog/product/cache/09ad5326b5f9b030d858c3959bbb1f0b/s/l/slicedbread480g480g_2020-no-layer-_-_-10-oct-2020.png"className='img' alt="" />
+                <div className='btn-area'>
+                  <a href='#' className='btn-shop'>กด</a>
+                  </div>
+              </article>
+              <article className='grid-item'>
+              <img src="https://shop.farmhouse.co.th/media/catalog/product/cache/09ad5326b5f9b030d858c3959bbb1f0b/s/l/slicedbread480g480g_2020-no-layer-_-_-10-oct-2020.png"className='img' alt="" />
+                <div className='btn-area'>
+                 <a href='#' className='btn-shop'>กด</a>
+                  </div>
+              </article>
+              <article className='grid-item'>
+              <img src="https://shop.farmhouse.co.th/media/catalog/product/cache/09ad5326b5f9b030d858c3959bbb1f0b/s/l/slicedbread480g480g_2020-no-layer-_-_-10-oct-2020.png"className='img' alt="" />
+                <div className='btn-area'>
+                 <a href='#' className='btn-shop'>กด</a>
+                  </div>
+              </article>
+          </div> 
+        
+      </section>
       
-    </section>
+    </>
   )
 }
 
