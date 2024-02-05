@@ -1,55 +1,55 @@
 .narbar{
-    display: flex;
-    /* border: 1px solid black; */
-    background-color: rgb(58, 58, 58);
-    color: white;
-  }
-  
-  #logo_container{
-    width: 70px;
-    height: 55px;
-    cursor:pointer;
-  }
+  display: flex;
+  /* border: 1px solid black; */
+  background-color: rgb(58, 58, 58);
+  color: white;
+}
 
-  #logo_container #logo{
-    width: 55px;
-    height: 55px;
+#logo_container{
+  width: 70px;
+  height: 55px;
+  cursor:pointer;
+}
 
-    object-fit: contain;
-  }
-  
-   ul{
-    width: 100%;
-    display: flex;
-    justify-content:left;
-    align-items: center;
-    list-style: none;
+#logo_container #logo{
+  width: 55px;
+  height: 55px;
 
-    padding-left: 0;
-  }
-  
-  ul a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 2rem; 
-  }
-  
-  ol{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* border: 1px solid red; */
-    list-style: none;
-  }
-  
-  ol a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 2rem; 
-  }
-  h1 a{
-    text-decoration: none;
-    color: #ffffff;
-  }
-                                      /*header*/
+  object-fit: contain;
+}
+
+ ul{
+  width: 100%;
+  display: flex;
+  justify-content:left;
+  align-items: center;
+  list-style: none;
+
+  padding-left: 0;
+}
+
+ul a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 2rem; 
+}
+
+ol{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* border: 1px solid red; */
+  list-style: none;
+}
+
+ol a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 2rem; 
+}
+h1 a{
+  text-decoration: none;
+  color: #ffffff;
+}
+     

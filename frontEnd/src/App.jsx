@@ -6,6 +6,7 @@ import Login from './component/Login.jsx';
 import About from './component/About.jsx';
 import NotFound from './component/NotFound.jsx';
 import Edit from './component/Edit.jsx';
+import Register from './component/Register.jsx';
 
 import './App.css';
 
@@ -20,7 +21,8 @@ function App() {
           <Route path='/shop' element={<Shop />} />
           <Route path='/login' element={<Login />} />
           <Route path='/about' element={<About />} />
-          <Route path='/edit' element={<Edit />}></Route>
+          <Route path='/edit' element={<Edit />} />
+          <Route path='/register' element={<Register />} />
           <Route path='_' element={<NotFound />} />
         </Route>
 
