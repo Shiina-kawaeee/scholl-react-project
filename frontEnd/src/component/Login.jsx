@@ -10,15 +10,20 @@ function Login() {
         <h1>login</h1>
       </div>
       <div className='grid-box'>
+      <label htmlFor="">username:</label>
         <input type="email" name="" id="" /> 
       </div>
+      <br />
       <div className='grid-box'>
+      <label htmlFor="">password:</label>
         <input type="password" name="" id="" />
       </div>
+      <br />
       <div className='grid-box'>
         <Link to="/Register">register</Link>
         {/* <input type="button" value="register" /> */}
       </div>
+      <br />
       <div>
       <input type="button" value="login" />
       </div>

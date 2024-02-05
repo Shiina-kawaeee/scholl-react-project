@@ -18,7 +18,7 @@ function Layout() {
           </ul>
           <ol>
             <NavLink to='/login'>&#128682;login</NavLink>
-            <NavLink to='/about'>about</NavLink>
+            <NavLink to='/cart'>&#128722;</NavLink>
           </ol>
         </header>
         <Outlet />
