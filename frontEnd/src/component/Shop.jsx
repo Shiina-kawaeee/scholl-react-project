@@ -7,7 +7,6 @@ function Shop() {
   const ImgfetchServer = 'http://localhost/nompang/assets';
 
   useEffect(() => {
-
     const url = 'http://localhost/nompang/phpApi/getData.php';
 
     axios.post(url, {collectionName : "nompang_products" } ,
@@ -16,8 +15,6 @@ function Shop() {
       'Content-Type': 'application/json; charset=UTF-8'
     }})
     .then((result) => {
-      // console.log(result.data.data.result);
-
       setDbInfo(result.data.data.result);
     }).catch((error) => {
       console.log('An Error is occupied: ', error);
@@ -25,19 +22,59 @@ function Shop() {
 
   }, []);
 
+  const handleDelete = (Pro_code, Pro_name) => {
+      if(window.confirm('Are you sure to delete ' + Pro_name)){
+        axios.post('http://localhost/nompang/phpApi/delete_product.php', {id: Pro_code},
+        {
+          headers: {
+          'Content-Type': 'application/json; charset=UTF-8'
+        }})
+        .then((res) => {
+            if(res.data.process.process == 200){
+              window.alert('delete success fully');
+              window.location.reload()
+
+            } else {
+              window.alert(res.data.error.error);
+            }
+        })
+    }
+  }
+
+
   return (
-    <div className='grid-contrainer'>
-      {dbInfo ? dbInfo.map((value) => {
+    <div className='grid-top-container'>
+      <a href="/add" id='Button-add' 
+        key={'addButton'}>ADD</a>
+      <div className='grid-contrainer'
+        key={'grid-container'}>
+        {dbInfo ? dbInfo.map((value) => {
 
-        return (     
-          <div className='grid-item'
-            key={value.Pro_name}>
-            <p>{value.Pro_name}</p>
-            <img src={`${ImgfetchServer}/shop/${value.Pro_src}`} alt={value.Pro_name} />
-          </div>
-        )
+          return (    
+            <div className='grid-card'
+              key={'card' + value.Pro_name + value.Pro_code}>
+              <div className='grid-item'
+                key={'contain' + value.Pro_name}>
+                <p className='cakeLabel' 
+                  key={value.Pro_name}>{value.Pro_name}</p>
+                <img className='img' 
+                  src={`${ImgfetchServer}/shop/${value.Pro_src}`} alt={value.Pro_name} 
+                  key={value.Pro_src}/>
+              </div>
+              {localStorage.getItem('loggedInStatus') == 1 ? <div className='grid-button'
+                key={'contain-button-' + value.Pro_name}>
+                <a id='Button-edit'
+                  key={'Edit-button-' + value.Pro_name}
+                  href={'/edit/' + value.Pro_code}>Edit</a>
+                <a id='Button-delete'
+                  key={'Delete-button-' + value.Pro_name}
+                  onClick={() => {handleDelete(value.Pro_code, value.Pro_name)}}>Delete</a>
+              </div> : ''}
+            </div>
+          )
 
-      }) : "Waiting for data"}
+        }) : "Waiting for data"}
+      </div>
     </div>
   )
 }

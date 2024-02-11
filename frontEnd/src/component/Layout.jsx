@@ -3,9 +3,16 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
+import {LoggedInStatus} from '../api/Auth.js';
+
 import '../css/Layout.css';
 
 function Layout() {
+  const handleLogOut = () => {
+    localStorage.clear();
+    window.location.reload();
+  }
+
   return (
     <>
         <header className='narbar'>
@@ -17,9 +24,8 @@ function Layout() {
             <NavLink to='/shop'>Shop</NavLink>
           </ul>
           <ol>
-            <NavLink to='/login'>&#128682;Login</NavLink>
             <NavLink to='/about'>About</NavLink>
-            <NavLink to='/edit'>Edit</NavLink>
+            {LoggedInStatus() ? <a href='#' onClick={handleLogOut}>Logout</a> : <NavLink to='/login'>&#128682;Login</NavLink>}
           </ol>
         </header>
         <Outlet />

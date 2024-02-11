@@ -20,7 +20,19 @@ function Login() {
         'Content-Type': 'application/json; charset=UTF-8'
       }}
     ).then((res) => {
-      console.log(res);
+      const processStatus = res.data.process.process;
+      // console.log(res);
+
+      //if logged in
+      if(processStatus == 200){
+        const username = res.data.username.username;
+        const userStatus = res.data.userStatus.userStatus;
+
+        localStorage.setItem('loggedInUser', username)
+        localStorage.setItem('loggedInStatus', userStatus)
+
+        window.location.href = '/';
+      }
     })
   }
 
@@ -30,10 +42,12 @@ function Login() {
       <h1>login</h1>
     </div>
       <div className='grid-box'>
+        <label>Email : </label>
         <input type="email" name="email" id="email" 
           onChange={(e) => {setEmail(e.target.value)}}/> 
       </div>
       <div className='grid-box'>
+        <label>Password : </label>
         <input type="password" name="password" id="password" 
           onChange={(e) => {setPassword(e.target.value)}}/>
       </div>

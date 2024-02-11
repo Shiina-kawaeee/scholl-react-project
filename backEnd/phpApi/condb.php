@@ -2,7 +2,7 @@
     function connectToDatabase(){
         $servername = 'localhost';
         $username = 'root';
-        $password = '';
+        $password = 'root';
         $dbname = 'nompang';
 
         try{
