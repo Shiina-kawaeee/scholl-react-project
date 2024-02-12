@@ -10,12 +10,13 @@ function Edit() {
 
     const url = 'http://localhost/nompang/phpApi/edit_product.php';
 
-    const [name, setName] = useState();
-    const [des, setDes] = useState();
-    const [detail, setDetail] = useState();
-    const [price, setPrice] = useState();
-    const [tot, setTot] = useState();
-    const [src, setSrc] = useState();
+    const [name, setName] = useState('');
+    const [des, setDes] = useState('');
+    const [detail, setDetail] = useState('');
+    const [price, setPrice] = useState('');
+    const [tot, setTot] = useState('');
+    const [src, setSrc] = useState('');
+    const [data, setData] = useState('');
 
     const handleUpdate = () => {
         axios.post(url, {id: id, name:name, des: des, detail:detail, price:price, tot:tot, src:src},
@@ -45,6 +46,7 @@ function Edit() {
             }})
         .then((res) => {
             if(res.data.process.process == 200){
+                setData(res.data.data.result)
                 setName(res.data.data.result.Pro_name);
                 setDes(res.data.data.result.Pro_des);
                 setDetail(res.data.data.result.Pro_detail);
@@ -58,10 +60,10 @@ function Edit() {
     }, [])
 
   return (
-    name ? 
+    data ? 
         <>
             <div id='edit-header-container'>
-                <h1 id='edit-header'>แก้ไขข้อมูล {name}</h1>
+                <h1 id='edit-header'>แก้ไขข้อมูล {data.Pro_name}</h1>
             </div>
             <div id='edit-form-container'>
                 <p>ชื่อสินค้า : </p>
