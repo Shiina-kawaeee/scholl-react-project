@@ -24,7 +24,6 @@ function Layout() {
             <NavLink to='/shop'>Shop</NavLink>
           </ul>
           <ol>
-            <NavLink to='/about'>About</NavLink>
             {LoggedInStatus() ? <a href='#' onClick={handleLogOut}>Logout</a> : <NavLink to='/login'>&#128682;Login</NavLink>}
           </ol>
         </header>

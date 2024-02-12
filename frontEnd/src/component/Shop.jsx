@@ -44,8 +44,8 @@ function Shop() {
 
   return (
     <div className='grid-top-container'>
-      <a href="/add" id='Button-add' 
-        key={'addButton'}>ADD</a>
+      {localStorage.getItem('loggedInStatus') == 1 ? <a href="/add" id='Button-add' 
+        key={'addButton'}>ADD</a> : ''}
       <div className='grid-contrainer'
         key={'grid-container'}>
         {dbInfo ? dbInfo.map((value) => {
@@ -61,15 +61,18 @@ function Shop() {
                   src={`${ImgfetchServer}/shop/${value.Pro_src}`} alt={value.Pro_name} 
                   key={value.Pro_src}/>
               </div>
-              {localStorage.getItem('loggedInStatus') == 1 ? <div className='grid-button'
+              <div className='grid-button'
                 key={'contain-button-' + value.Pro_name}>
-                <a id='Button-edit'
-                  key={'Edit-button-' + value.Pro_name}
-                  href={'/edit/' + value.Pro_code}>Edit</a>
-                <a id='Button-delete'
-                  key={'Delete-button-' + value.Pro_name}
-                  onClick={() => {handleDelete(value.Pro_code, value.Pro_name)}}>Delete</a>
-              </div> : ''}
+                  {localStorage.getItem('loggedInStatus') == 1 ? <>
+                    <a id='Button-edit'
+                      key={'Edit-button-' + value.Pro_name}
+                      href={'/edit/' + value.Pro_code}>Edit</a>
+                    <a id='Button-delete'
+                      key={'Delete-button-' + value.Pro_name}
+                      onClick={() => {handleDelete(value.Pro_code, value.Pro_name)}}>Delete</a></>: ''}
+                  <a href={'/buy/' + value.Pro_code} className='Button-buy'
+                    key={'butButton'}>Buy</a>
+                </div>
             </div>
           )
 

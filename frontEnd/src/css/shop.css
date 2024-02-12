@@ -74,6 +74,8 @@
 
     background-color: red;
 
+    margin-right: 6vw;
+
     border: unset;
 
     user-select: none;
@@ -102,6 +104,26 @@
     color: white;
 }
 
+.Button-buy{
+    padding: 1vw;
+    border-radius: 0.2vw;
+
+    background-color:   orange;
+
+    margin-top: 2vw;
+
+    justify-self: end;
+
+    width: fit-content;
+
+    border: unset;
+
+    user-select: none;
+
+    text-decoration: none;
+
+    color: white; 
+}
 
 /* div * {
     background-color: rgba(0, 0, 0, 0.2);

@@ -1,0 +1,86 @@
+/* div * {
+    background-color: rgba(0, 0, 0, 0.2);
+} */
+
+#Buy-container {
+    display:grid;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 50vw;
+
+    column-gap: 3vw;
+
+    margin-top: 2vw;
+
+    justify-content: center;
+}
+
+#Buy-image-container {
+    width: 40vw;
+    height: 50vw;
+
+}
+
+#Buy-image {
+    object-fit: cover;
+    object-position: top;
+
+    border-radius: 1vw;
+
+    width: 40vw;
+    height: 50vw;
+}
+
+#Buy-text-container{
+    display: grid;
+
+    grid-template-rows: 10vw 25vw 10vw;
+
+    justify-content: start;
+}
+#Buy-text-head {
+    font-size: 5vw;
+
+    margin:2vw 0vw 1vw 0vw;
+}
+#Buy-text{
+    font-size: 1.5vw;
+    text-indent: 1vw;
+}
+#Buy-text-detail-container {
+    display: grid;
+
+    width:40vw;
+}
+#Buy-text-quantity{
+    font-size: 2vw;
+    text-indent: 1vw;
+}
+#Buy-text-price{
+    font-size: 2vw;
+    text-indent: 1vw;
+}
+
+
+.Button-buy-buy{
+    margin-top: -2vw;
+    margin-left: 20vw;
+
+    justify-self: unset;
+
+    height: max-content;
+
+    padding: 1vw;
+    border-radius: 0.2vw;
+
+    background-color:   orange;
+
+    width: max-content;
+
+    border: unset;
+
+    user-select: none;
+
+    text-decoration: none;
+
+    color: white; 
+}

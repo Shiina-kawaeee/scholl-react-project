@@ -3,11 +3,11 @@ import Home from './component/Home.jsx';
 import Layout from './component/Layout.jsx';
 import Shop from './component/Shop.jsx';
 import Login from './component/Login.jsx';
-import About from './component/About.jsx';
 import NotFound from './component/NotFound.jsx';
 import Edit from './component/Edit.jsx';
 import Register from './component/Register.jsx';
 import Add from './component/Add.jsx'
+import Buy from './component/Buy.jsx';
 
 import './App.css';
 
@@ -21,10 +21,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/about' element={<About />} />
           <Route path='/edit/:id' element={<Edit />} />
           <Route path='/register' element={<Register />} />
           <Route path='/add' element={<Add />} />
+          <Route path='/buy/:id' element={<Buy />} />
           <Route path='_' element={<NotFound />} />
         </Route>
 
