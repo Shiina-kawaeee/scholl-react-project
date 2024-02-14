@@ -17,7 +17,7 @@ function Layout() {
     <>
         <header className='narbar'>
           <div id='logo_container'>
-              <img id="logo" src={logo}></img>
+              <img id="logo" src={logo} onClick={() => {window.location.href = "/"}}></img>
           </div>
           <ul>
             <NavLink to='/'>Home</NavLink>
